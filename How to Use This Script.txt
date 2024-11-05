@@ -1,0 +1,31 @@
+How to Use This Script
+
+Save the Script: Copy and paste the code into a file named monitor.sh.
+
+Make the Script Executable: Run the following command to give execution permissions:
+
+bash
+
+chmod +x monitor.sh
+
+Run the Script:
+
+bash
+
+./monitor.sh
+
+
+Scheduling with Cron
+
+To automate this script to run at specific intervals, you can add it to your crontab:
+
+Open the crontab editor:
+bash
+
+crontab -e
+Add a line like the following to run the script every hour:
+bash
+
+0 * * * * /path/to/monitor.sh >> /path/to/logfile.log
+
+This script will display real-time system stats every time you run it, and you can modify it to log data to a file or schedule regular monitoring with cron.
